@@ -23,6 +23,7 @@ class NotepadApp:
         self.spell = SpellChecker()
 
         # Create UI
+        
         self.create_widgets()
 
     def create_widgets(self):
@@ -45,7 +46,7 @@ class NotepadApp:
         edit_menu.add_command(label="Undo", command=lambda: self.text_area.event_generate("<<Undo>>"))
         edit_menu.add_command(label="Redo", command=lambda: self.text_area.event_generate("<<Redo>>"))
         edit_menu.add_separator()
-        
+
         edit_menu.add_command(label="Find & Replace", command=self.find_replace)
         edit_menu.add_command(label="Check Spelling", command=self.check_spelling)
         self.menu_bar.add_cascade(label="Edit", menu=edit_menu)
